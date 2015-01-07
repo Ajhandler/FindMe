@@ -9,7 +9,7 @@
 <body>
 	<p class="notice"><%= notice %></p> <!-- Flash Alerts -->
 	<p class="alert"><%= alert %></p>
-
+	<%= link_to "logout", destroy_user_session_path, method: :delete %>
 <%= yield %>
 
 </body>
