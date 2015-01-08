@@ -1,7 +1,12 @@
 <h2>Sign up</h2>
 
-<%= form_for(@user, as: resource_name, url: user_registration_path(@user)) do |f| %>
+
+<%= form_for @user, :url => user_registration_path, :html => { :multipart => true } do |f| %>
   <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.file_field :avatar %>
+  </div>
 
   <div class="field">
     <%= f.label :email %><br />
