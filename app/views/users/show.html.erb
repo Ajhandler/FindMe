@@ -1,0 +1,8 @@
+<%= image_tag @user.avatar.url(:medium) %>
+<h1> <%= @user.first_name%> </h1>
+
+<h2>Contacts</h2>
+<% @user.contacts.each do |contact| %>
+	<p> <%= contact.name %> </p>
+	<p> <%= contact.phone_number %> </p>
+<%end%>	
